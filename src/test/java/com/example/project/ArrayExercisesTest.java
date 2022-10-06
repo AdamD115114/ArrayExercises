@@ -3,7 +3,7 @@ package com.example.project;
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
 
@@ -14,12 +14,12 @@ import org.junit.jupiter.api.TestInstance;
 public class ArrayExercisesTest {
     @Test
     void testConvertFromStringsToArray() {
-        assertEquals(new int[]{30, 40, 20}, ArrayExercises.convertFromStringsToArray("30", "40", "20"));
+        assertArrayEquals(new int[]{30, 40, 20}, ArrayExercises.convertFromStringsToArray("30", "40", "20"));
     }
 
     @Test
     void testConvertToArray() {
-        assertEquals(new int[]{2, 3, 4}, ArrayExercises.convertToArray(2, 3, 4));
+        assertArrayEquals(new int[]{2, 3, 4}, ArrayExercises.convertToArray(2, 3, 4));
 
     }
 
@@ -35,7 +35,7 @@ public class ArrayExercisesTest {
 
     @Test
     void testGetMinMax() {
-        assertEquals(new int[] {1,30}, ArrayExercises.getMinMax(new int[]{2, 3, 4, 5, 6, 7, 30, 8, 9, 1, 2, 3, 4, 5, 28, 15}));
+        assertArrayEquals(new int[] {1,30}, ArrayExercises.getMinMax(new int[]{2, 3, 4, 5, 6, 7, 30, 8, 9, 1, 2, 3, 4, 5, 28, 15}));
     }
 
     @Test
@@ -46,16 +46,16 @@ public class ArrayExercisesTest {
 
     @Test
     void testRemoveEvens() {
-        assertEquals(new int[]{1, 3, 5, 7, 9}, ArrayExercises.removeEvens(new int[]{1, 2, 3, 4, 5, 6, 7, 8, 9, 10}));
+        assertArrayEquals(new int[]{1, 3, 5, 7, 9}, ArrayExercises.removeEvens(new int[]{1, 2, 3, 4, 5, 6, 7, 8, 9, 10}));
     }
 
     @Test
     void testReverseArray() {
-        assertEquals(new int[]{10, 9, 8, 7, 6, 5, 4, 3, 2, 1}, ArrayExercises.reverseArray(new int[]{1, 2, 3, 4, 5, 6, 7, 8, 9, 10}));
+        assertArrayEquals(new int[]{10, 9, 8, 7, 6, 5, 4, 3, 2, 1}, ArrayExercises.reverseArray(new int[]{1, 2, 3, 4, 5, 6, 7, 8, 9, 10}));
     }
 
     @Test
     void testSortArray() {
-        assertEquals(new int[]{1, 2, 3, 4, 5, 6, 7, 8, 9, 10}, ArrayExercises.sortArray(new int[]{10, 9, 8, 7, 6, 5, 4, 3, 2, 1}));
+        assertArrayEquals(new int[]{1, 2, 3, 4, 5, 6, 7, 8, 9, 10}, ArrayExercises.sortArray(new int[]{10, 9, 8, 7, 6, 5, 4, 3, 2, 1}));
     }
 }
